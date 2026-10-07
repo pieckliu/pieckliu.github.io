@@ -246,27 +246,108 @@
       </div>
     </section>
 
-    <section class="section section--muted page-view" id="research" data-page="research" aria-labelledby="research-title" hidden>
-      <div class="page-shell">
-        <div class="section-heading section-heading--split">
-          <div><p class="eyebrow"><span></span> Research</p><h2 id="research-title">Research, publications, and inquiry.</h2></div>
-          <p>[Add your research interests or a short research overview.]</p>
-        </div>
-        <div class="research-layout">
-          <div class="publication-list">
+    <section class="section page-view profile-page" id="research" data-page="research" aria-label="Research" hidden>
+      <div class="page-shell hero-layout">
+        <aside class="profile-panel" aria-label="Profile overview">
+          <div class="profile-image-wrap">
+            <img class="profile-image" src="assets/images/profile/profile_mengqingliu.png" alt="Profile photo of Mengqing Liu" width="180" height="210">
+            <span class="availability-dot" aria-hidden="true"></span>
+          </div>
+          <div class="profile-identity">
+            <p class="profile-name">Mengqing Liu</p>
+            <p class="profile-role">AI Engineer</p>
+            <p class="profile-location">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"/></svg>
+              <span>Hamilton, Canada</span>
+            </p>
+          </div>
+          <div class="profile-meta" aria-label="Contact links">
+            <a href="mailto:pieckliu@gmail.com" aria-label="Email Mengqing Liu">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h16a2 2 0 0 0 2-2V6c0-1.1-.9-2-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"/></svg>
+              <span>pieckliu@gmail.com</span>
+            </a>
+            <a href="https://www.linkedin.com/in/mengqing-liu-2692a83b5" target="_blank" rel="noopener noreferrer" aria-label="Mengqing Liu on LinkedIn">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6.5 8.25H3V21h3.5V8.25ZM4.75 3A2.04 2.04 0 1 0 4.75 7.08 2.04 2.04 0 0 0 4.75 3ZM21 13.69c0-3.84-2.05-5.63-4.79-5.63-2.2 0-3.19 1.21-3.74 2.06V8.25H8.98V21h3.49v-6.31c0-1.67.32-3.29 2.39-3.29 2.04 0 2.06 1.91 2.06 3.4V21H21v-7.31Z"/></svg>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://scholar.google.com/citations?user=6asKXhIAAAAJ" target="_blank" rel="noopener noreferrer" aria-label="Mengqing Liu on Google Scholar">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3 1 9l4 2.18v5L12 21l7-4.82v-5L21 10v6h2V9L12 3Zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9ZM17 15.12l-5 3.45-5-3.45v-2.85L12 15l5-2.73v2.85Z"/></svg>
+              <span>Google Scholar</span>
+            </a>
+            <a href="https://github.com/pieckliu" target="_blank" rel="noopener noreferrer" aria-label="Mengqing Liu on GitHub">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.59 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.09.68-.22.68-.49 0-.24-.01-1.05-.01-1.9-2.78.62-3.37-1.21-3.37-1.21-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.57 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.04 1.03-2.76-.1-.26-.45-1.3.1-2.72 0 0 .84-.28 2.75 1.05A9.3 9.3 0 0 1 12 6.91a9.3 9.3 0 0 1 2.5.35c1.91-1.33 2.75-1.05 2.75-1.05.55 1.42.2 2.46.1 2.72.64.72 1.03 1.64 1.03 2.76 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.59.69.49A10.24 10.24 0 0 0 22 12.25C22 6.59 17.52 2 12 2Z"/></svg>
+              <span>GitHub</span>
+            </a>
+          </div>
+        </aside>
+
+        <div class="research-content">
+          <section class="research-interests" aria-labelledby="research-interests-title">
+            <h2 id="research-interests-title">Research Interests</h2>
+            <ul>
+              <li>Applied AI &amp; Intelligent Systems</li>
+              <li>Multimodal AI</li>
+              <li>LLM &amp; Agentic AI Systems</li>
+              <li>Human-in-the-Loop &amp; Reliable AI</li>
+            </ul>
+          </section>
+
+          <div class="publication-list" aria-label="Selected publications">
             <article class="publication-item">
-              <div class="publication-year">[Year]</div>
-              <div><p class="publication-type">[Venue / Journal / Conference]</p><h3>[Publication Title]</h3><p class="publication-authors">[Authors]</p><p>[Short Description]</p><div class="text-links"><a href="#" data-placeholder-link>Paper <span aria-hidden="true">&#8599;</span></a><a href="#" data-placeholder-link>Code <span aria-hidden="true">&#8599;</span></a></div></div>
+              <div class="publication-year">2023</div>
+              <div>
+                <p class="publication-type">SPIE Medical Imaging</p>
+                <h3>ADC-Net: Adaptive detail compensation network for prostate segmentation in 3D transrectal ultrasound images</h3>
+                <p class="publication-authors"><strong>M. Liu</strong>, K. Wu, and L. Jiang</p>
+                <p>Introduces a 3D TRUS prostate-segmentation network that compensates for fine detail lost during encoder downsampling, improving boundary-sensitive volumetric segmentation.</p>
+                <div class="text-links"><a href="https://doi.org/10.1117/12.2652048" target="_blank" rel="noopener noreferrer">Paper <span aria-hidden="true">&#8599;</span></a></div>
+              </div>
             </article>
+
             <article class="publication-item">
-              <div class="publication-year">[Year]</div>
-              <div><p class="publication-type">[Venue / Journal / Conference]</p><h3>[Publication Title]</h3><p class="publication-authors">[Authors]</p><p>[Short Description]</p><div class="text-links"><a href="#" data-placeholder-link>Paper <span aria-hidden="true">&#8599;</span></a><a href="#" data-placeholder-link>Code <span aria-hidden="true">&#8599;</span></a></div></div>
+              <div class="publication-year">2024</div>
+              <div>
+                <p class="publication-type">Quantitative Imaging in Medicine and Surgery</p>
+                <h3>3D EAGAN: 3D edge-aware attention generative adversarial network for prostate segmentation in transrectal ultrasound images</h3>
+                <p class="publication-authors"><strong>M. Liu</strong>, X. Shao, L. Jiang, and K. Wu</p>
+                <p>Combines detail compensation, 3D spatial-channel attention, edge enhancement, and adversarial learning to produce more accurate prostate boundaries in challenging TRUS volumes.</p>
+                <div class="text-links"><a href="https://doi.org/10.21037/qims-23-1698" target="_blank" rel="noopener noreferrer">Paper <span aria-hidden="true">&#8599;</span></a></div>
+              </div>
+            </article>
+
+            <article class="publication-item">
+              <div class="publication-year">2022</div>
+              <div>
+                <p class="publication-type">IET Image Processing</p>
+                <h3>CPDINet: Blind image quality assessment via a content perception and distortion inference network</h3>
+                <p class="publication-authors">X. Shao, <strong>M. Liu</strong>, Z. Li, and P. Zhang</p>
+                <p>Separates image-content perception from distortion inference, then adaptively fuses both feature streams for no-reference image quality prediction.</p>
+                <div class="text-links"><a href="https://doi.org/10.1049/ipr2.12463" target="_blank" rel="noopener noreferrer">Paper <span aria-hidden="true">&#8599;</span></a></div>
+              </div>
+            </article>
+
+            <article class="publication-item">
+              <div class="publication-year">2024</div>
+              <div>
+                <p class="publication-type">arXiv</p>
+                <h3>SwarmBrain: Embodied agent for real-time strategy game StarCraft II via large language models</h3>
+                <p class="publication-authors">X. Shao, W. Jiang, F. Zuo, and <strong>M. Liu</strong></p>
+                <p>Pairs an LLM-driven high-level strategy module with a fast condition-response reflex network, enabling an embodied StarCraft II agent to manage both macro strategy and real-time tactics.</p>
+                <div class="text-links"><a href="https://arxiv.org/abs/2401.17749" target="_blank" rel="noopener noreferrer">Paper <span aria-hidden="true">&#8599;</span></a><a href="https://github.com/ramsayxiaoshao/SwarmBrain" target="_blank" rel="noopener noreferrer">Code <span aria-hidden="true">&#8599;</span></a></div>
+              </div>
+            </article>
+
+            <article class="publication-item">
+              <div class="publication-year">2025</div>
+              <div>
+                <p class="publication-type">OSF Preprints</p>
+                <h3>Urban Legends or Mass Memory? An Exploratory Study of the “Miniature Flying Craft” Myth in 20th Century China</h3>
+                <p class="publication-authors">X. Shao, F. Zuo, A. Liu, and <strong>M. Liu</strong></p>
+                <p>Examines recurring memories of “miniature flying craft” in late-20th-century China and proposes the Narrative-Induced Visual Myth framework for understanding how shared narratives can shape collective visual memory.</p>
+                <div class="text-links"><a href="https://doi.org/10.31234/osf.io/3729h" target="_blank" rel="noopener noreferrer">Paper <span aria-hidden="true">&#8599;</span></a></div>
+              </div>
             </article>
           </div>
-          <aside class="interest-card">
-            <p class="card-label">Research Interests</p>
-            <ul><li><span>01</span> [Research Interest]</li><li><span>02</span> [Research Interest]</li><li><span>03</span> [Research Interest]</li><li><span>04</span> [Research Interest]</li></ul>
-          </aside>
         </div>
       </div>
     </section>
