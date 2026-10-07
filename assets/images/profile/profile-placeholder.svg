@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 420" role="img" aria-labelledby="title desc">
+  <title id="title">Profile photo placeholder</title><desc id="desc">A neutral geometric portrait placeholder to be replaced with a profile photo.</desc>
+  <rect width="360" height="420" fill="#e9edf2"/><path d="M0 327 360 180v240H0Z" fill="#dde3ea"/>
+  <circle cx="180" cy="139" r="66" fill="#bcc6d2"/><path d="M69 390c0-73 49-124 111-124s111 51 111 124v30H69Z" fill="#a9b6c4"/>
+  <circle cx="290" cy="72" r="42" fill="none" stroke="#2457d6" stroke-width="2" opacity=".32"/><path d="M26 62h66M26 76h42" stroke="#2457d6" stroke-width="3" opacity=".35"/>
+  <text x="180" y="398" text-anchor="middle" fill="#596677" font-family="Arial, sans-serif" font-size="13" letter-spacing="2">PROFILE PHOTO</text>
+</svg>
