@@ -1,10 +1,15 @@
 const header = document.querySelector('[data-header]');
 const nav = document.querySelector('[data-nav]');
 const navToggle = document.querySelector('[data-nav-toggle]');
-const navLinks = [...document.querySelectorAll('.nav-link[href^="#"]')];
-const sections = [...document.querySelectorAll('main section[id]')];
+const navLinks = [...document.querySelectorAll('.nav-link[data-page-link]')];
+const pageLinks = [...document.querySelectorAll('[data-page-link]')];
+const pageViews = [...document.querySelectorAll('[data-page]')];
 const placeholderNotice = document.querySelector('[data-placeholder-notice]');
 let noticeTimer;
+
+if ('scrollRestoration' in window.history) {
+  window.history.scrollRestoration = 'manual';
+}
 
 function setMenuState(isOpen) {
   navToggle.setAttribute('aria-expanded', String(isOpen));
@@ -16,8 +21,6 @@ function setMenuState(isOpen) {
 navToggle.addEventListener('click', () => {
   setMenuState(navToggle.getAttribute('aria-expanded') !== 'true');
 });
-
-navLinks.forEach((link) => link.addEventListener('click', () => setMenuState(false)));
 
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape' && navToggle.getAttribute('aria-expanded') === 'true') {
@@ -37,19 +40,48 @@ function updateHeader() {
 updateHeader();
 window.addEventListener('scroll', updateHeader, { passive: true });
 
-const sectionObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (!entry.isIntersecting) return;
-    navLinks.forEach((link) => {
-      const isCurrent = link.getAttribute('href') === `#${entry.target.id}`;
-      link.classList.toggle('is-active', isCurrent);
-      if (isCurrent) link.setAttribute('aria-current', 'page');
-      else link.removeAttribute('aria-current');
-    });
-  });
-}, { rootMargin: '-25% 0px -65% 0px', threshold: 0 });
+function getPageIdFromHash() {
+  const pageId = window.location.hash.slice(1);
+  return pageViews.some((page) => page.dataset.page === pageId) ? pageId : 'home';
+}
 
-sections.forEach((section) => sectionObserver.observe(section));
+function showPage(pageId, updateHistory = false) {
+  const targetPage = pageViews.find((page) => page.dataset.page === pageId);
+  if (!targetPage) return;
+
+  pageViews.forEach((page) => {
+    const isActive = page === targetPage;
+    page.hidden = !isActive;
+    page.classList.toggle('is-active', isActive);
+  });
+
+  navLinks.forEach((link) => {
+    const isCurrent = link.getAttribute('href') === `#${pageId}`;
+    link.classList.toggle('is-active', isCurrent);
+    if (isCurrent) link.setAttribute('aria-current', 'page');
+    else link.removeAttribute('aria-current');
+  });
+
+  if (updateHistory && window.location.hash !== `#${pageId}`) {
+    window.history.pushState({ page: pageId }, '', `#${pageId}`);
+  }
+
+  setMenuState(false);
+  document.documentElement.scrollTop = 0;
+  document.body.scrollTop = 0;
+}
+
+pageLinks.forEach((link) => {
+  link.addEventListener('click', (event) => {
+    const pageId = link.getAttribute('href').slice(1);
+    if (!pageViews.some((page) => page.dataset.page === pageId)) return;
+    event.preventDefault();
+    showPage(pageId, true);
+  });
+});
+
+window.addEventListener('popstate', () => showPage(getPageIdFromHash()));
+showPage(getPageIdFromHash());
 
 document.querySelectorAll('[data-placeholder-link]').forEach((link) => {
   link.addEventListener('click', (event) => {

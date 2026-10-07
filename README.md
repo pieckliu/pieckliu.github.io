@@ -1,6 +1,6 @@
 # AI / Machine Learning Engineer Portfolio
 
-A dependency-free personal portfolio starter designed for GitHub Pages. All personal, professional, project, research, and education content is intentionally represented by placeholders.
+A dependency-free personal portfolio designed for GitHub Pages. The top navigation switches between Home, Projects, Experience, Research, and Education views without loading a new document.
 
 ## Project structure
 
@@ -32,7 +32,7 @@ Then open `http://localhost:8000`.
 
 ## Customize
 
-1. Replace bracketed text in `index.html` with verified personal content.
+1. Replace the remaining bracketed text in `index.html` with verified project, experience, research, and education content.
 2. Replace the profile SVG and update its path and alt text.
 3. Replace project SVGs and update each card's content, technology tags, and links.
 4. Replace `assets/files/cv.pdf` with the final CV while keeping the filename, or update both CV links.
