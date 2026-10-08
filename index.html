@@ -8,7 +8,7 @@
   <title>Mengqing Liu | AI Engineer</title>
   <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/main.js" defer></script>
+  <script src="js/main.js?v=20261008" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -74,19 +74,19 @@
           <h1 class="portfolio-title" id="hero-title">Portfolio</h1>
           <p class="hero-description hero-description--lead">The following page showcases some of my papers and projects worked on by me over the last few years.</p>
 
-          <div class="home-project-list" aria-label="Project placeholders">
-            <article class="home-project-item" aria-label="Empty project entry 1">
-              <div class="home-project-visual" aria-hidden="true">
-                <img src="assets/images/projects/project-01-placeholder.svg" alt="" width="720" height="440">
+          <div class="home-project-list" aria-label="Selected projects">
+            <a class="home-project-item home-project-item--linked" href="#projects" data-page-link aria-label="View the Prostate Contouring and Review Platform project">
+              <div class="home-project-visual">
+                <img src="assets/images/projects/framework.png" alt="System framework for the Prostate Contouring and Review Platform" width="1300" height="700">
                 <span>01</span>
               </div>
-              <div class="home-project-content" aria-hidden="true">
-                <span class="home-project-line home-project-line--title"></span>
-                <span class="home-project-line home-project-line--meta"></span>
-                <span class="home-project-line"></span>
-                <span class="home-project-line home-project-line--short"></span>
+              <div class="home-project-copy">
+                <p class="home-project-kicker">Healthcare AI &middot; Medical Imaging</p>
+                <h2>Prostate Contouring &amp; Review Platform</h2>
+                <p>3D ultrasound segmentation and an LLM-assisted, clinician-in-the-loop review workflow.</p>
+                <span class="home-project-link">View project <span aria-hidden="true">&rarr;</span></span>
               </div>
-            </article>
+            </a>
 
             <article class="home-project-item" aria-label="Empty project entry 2">
               <div class="home-project-visual" aria-hidden="true">
@@ -105,80 +105,143 @@
       </div>
     </section>
 
-    <section class="section section--projects page-view" id="projects" data-page="projects" aria-labelledby="projects-title" hidden>
-      <div class="page-shell">
-        <div class="section-heading section-heading--split">
-          <div>
-            <p class="eyebrow"><span></span> Selected Engineering Work</p>
-            <h2 id="projects-title">Projects built to solve, ship, and scale.</h2>
+    <section class="section page-view case-study" id="projects" data-page="projects" aria-labelledby="projects-title" hidden>
+      <div class="page-shell case-shell">
+        <a class="case-back-link" href="#home" data-page-link><span aria-hidden="true">&larr;</span> Back to Portfolio</a>
+
+        <header class="case-hero">
+          <p class="case-label">Healthcare AI &middot; Clinical Workflow</p>
+          <h1 id="projects-title">Prostate Contouring &amp; Review Platform</h1>
+          <p class="case-tagline">From 3D ultrasound segmentation research to a human-in-the-loop clinical AI workflow.</p>
+          <p class="case-summary">Developed through a collaboration between <a class="case-inline-link" href="https://www.nchu.edu.cn/en" target="_blank" rel="noopener noreferrer">Nanchang Hangkong University</a> and The First Affiliated Hospital of Nanchang University, this platform brings 3D prostate segmentation into an operational clinical workflow. It is used at the hospital to generate initial contours, support quality-aware review, and assist clinicians through an LLM-enabled interaction and documentation layer.</p>
+          <ul class="case-tags" aria-label="Project areas">
+            <li>Healthcare AI</li>
+            <li>Medical Imaging</li>
+            <li>Human-in-the-Loop</li>
+            <li>LLM Systems</li>
+          </ul>
+          <div class="case-actions">
+            <a class="case-button case-button--primary" href="#projects" data-page-link data-scroll-link data-scroll-target="#system-framework">View System Design <span aria-hidden="true">&darr;</span></a>
+            <a class="case-button" href="https://qims.amegroups.org/article/view/124717/html" target="_blank" rel="noopener noreferrer">View Publication <span aria-hidden="true">&nearr;</span></a>
           </div>
-          <p>[Add a short overview of your practical AI and engineering project work.]</p>
-        </div>
+        </header>
 
-        <div class="project-grid">
-          <article class="project-card" id="project-01">
-            <a class="project-visual" href="#" data-placeholder-link aria-label="Open Project 01 placeholder">
-              <img src="assets/images/projects/project-01-placeholder.svg" alt="Placeholder thumbnail for Project 01" width="720" height="440">
-              <span class="project-number">01</span><span class="visual-arrow" aria-hidden="true">&#8599;</span>
-            </a>
-            <div class="project-body">
-              <p class="project-category">[Project Category]</p><h3>Project 01</h3><p class="project-description">[Project Description]</p>
-              <ul class="tag-list" aria-label="Technologies used"><li>[Technology]</li><li>[Technology]</li><li>[Technology]</li></ul>
-              <div class="project-links">
-                <a href="#" data-placeholder-link>GitHub <span aria-hidden="true">&#8599;</span></a>
-                <a href="#" data-placeholder-link>Live Demo <span aria-hidden="true">&#8599;</span></a>
-                <a class="project-cta" href="#" data-placeholder-link>View Project <span aria-hidden="true">&#8594;</span></a>
-              </div>
+        <div class="case-content">
+          <section class="case-section case-section--split" aria-labelledby="clinical-challenge-title">
+            <div>
+              <p class="case-section-number">01</p>
+              <h2 id="clinical-challenge-title">The Clinical Challenge</h2>
             </div>
-          </article>
+            <div class="case-prose">
+              <p>Accurate prostate delineation in 3D transrectal ultrasound is important for diagnosis, treatment planning, and follow-up, but ambiguous boundaries, speckle noise, and heterogeneous intensities make consistent contouring difficult. Manual delineation also adds time and introduces variability between reviewers.</p>
+              <p>This deployed workflow combines a specialized segmentation model with an LLM clinical copilot. The model produces a boundary-aware initial contour; the copilot brings together case context, quality-control findings, institutional knowledge, and documentation support to help clinicians review the result and support diagnostic decision-making. Clinicians retain final control.</p>
+            </div>
+          </section>
 
-          <article class="project-card" id="project-02">
-            <a class="project-visual" href="#" data-placeholder-link aria-label="Open Project 02 placeholder">
-              <img src="assets/images/projects/project-02-placeholder.svg" alt="Placeholder thumbnail for Project 02" width="720" height="440">
-              <span class="project-number">02</span><span class="visual-arrow" aria-hidden="true">&#8599;</span>
-            </a>
-            <div class="project-body">
-              <p class="project-category">[Project Category]</p><h3>Project 02</h3><p class="project-description">[Project Description]</p>
-              <ul class="tag-list" aria-label="Technologies used"><li>[Technology]</li><li>[Technology]</li><li>[Technology]</li></ul>
-              <div class="project-links">
-                <a href="#" data-placeholder-link>GitHub <span aria-hidden="true">&#8599;</span></a>
-                <a href="#" data-placeholder-link>Live Demo <span aria-hidden="true">&#8599;</span></a>
-                <a class="project-cta" href="#" data-placeholder-link>View Project <span aria-hidden="true">&#8594;</span></a>
-              </div>
+          <section class="case-section" aria-labelledby="platform-does-title">
+            <div class="case-section-heading">
+              <p class="case-section-number">02</p>
+              <h2 id="platform-does-title">What the Platform Does</h2>
             </div>
-          </article>
+            <div class="feature-grid">
+              <article>
+                <h3>Automated 3D Contouring</h3>
+                <p>Generates an initial prostate contour from 3D transrectal ultrasound volumes using the boundary-aware 3D EAGAN model.</p>
+              </article>
+              <article>
+                <h3>Quality-Aware Review</h3>
+                <p>Surfaces uncertainty and quality signals so reviewers can focus attention on regions most likely to require correction.</p>
+              </article>
+              <article>
+                <h3>Clinician-in-the-Loop</h3>
+                <p>Keeps contour approval, editing, and final clinical decisions with the clinician while preserving an auditable review trail.</p>
+              </article>
+              <article>
+                <h3>LLM Clinical Copilot</h3>
+                <p>Organizes case context, retrieves relevant guidance, explains QA findings, and assists with structured clinical documentation.</p>
+              </article>
+            </div>
+          </section>
 
-          <article class="project-card" id="project-03">
-            <a class="project-visual" href="#" data-placeholder-link aria-label="Open Project 03 placeholder">
-              <img src="assets/images/projects/project-03-placeholder.svg" alt="Placeholder thumbnail for Project 03" width="720" height="440">
-              <span class="project-number">03</span><span class="visual-arrow" aria-hidden="true">&#8599;</span>
-            </a>
-            <div class="project-body">
-              <p class="project-category">[Project Category]</p><h3>Project 03</h3><p class="project-description">[Project Description]</p>
-              <ul class="tag-list" aria-label="Technologies used"><li>[Technology]</li><li>[Technology]</li><li>[Technology]</li></ul>
-              <div class="project-links">
-                <a href="#" data-placeholder-link>GitHub <span aria-hidden="true">&#8599;</span></a>
-                <a href="#" data-placeholder-link>Live Demo <span aria-hidden="true">&#8599;</span></a>
-                <a class="project-cta" href="#" data-placeholder-link>View Project <span aria-hidden="true">&#8594;</span></a>
-              </div>
+          <section class="case-section" aria-labelledby="how-it-works-title">
+            <div class="case-section-heading">
+              <p class="case-section-number">03</p>
+              <h2 id="how-it-works-title">How It Works</h2>
+              <p>The platform separates perception, verification, review, and clinical output into modular components that can be inspected and improved independently.</p>
             </div>
-          </article>
+            <figure class="case-figure case-figure--wide" id="system-framework">
+              <img src="assets/images/projects/framework.png" alt="System framework showing clinical data ingestion, 3D EAGAN segmentation, uncertainty analysis, clinician review, and an LLM clinical copilot" width="1300" height="700">
+              <figcaption>System framework: a controlled path from clinical imaging data to AI-assisted contouring, quality review, clinician approval, and structured output.</figcaption>
+            </figure>
+            <ol class="workflow-list">
+              <li><div><h3>Clinical Data</h3><p>3D TRUS volumes and available case context enter a controlled clinical data pipeline.</p></div></li>
+              <li><div><h3>3D Segmentation</h3><p>3D EAGAN generates an initial boundary-aware prostate segmentation.</p></div></li>
+              <li><div><h3>Uncertainty &amp; Quality Control</h3><p>Automated checks identify uncertain areas and potentially inconsistent outputs for focused review.</p></div></li>
+              <li><div><h3>Clinician Review</h3><p>Clinicians inspect, edit, and approve the contour with contextual assistance from the LLM copilot.</p></div></li>
+              <li><div><h3>Clinical Output</h3><p>The approved contour and structured record are exported with review history and audit information.</p></div></li>
+            </ol>
+          </section>
 
-          <article class="project-card" id="project-04">
-            <a class="project-visual" href="#" data-placeholder-link aria-label="Open Project 04 placeholder">
-              <img src="assets/images/projects/project-04-placeholder.svg" alt="Placeholder thumbnail for Project 04" width="720" height="440">
-              <span class="project-number">04</span><span class="visual-arrow" aria-hidden="true">&#8599;</span>
-            </a>
-            <div class="project-body">
-              <p class="project-category">[Project Category]</p><h3>Project 04</h3><p class="project-description">[Project Description]</p>
-              <ul class="tag-list" aria-label="Technologies used"><li>[Technology]</li><li>[Technology]</li><li>[Technology]</li></ul>
-              <div class="project-links">
-                <a href="#" data-placeholder-link>GitHub <span aria-hidden="true">&#8599;</span></a>
-                <a href="#" data-placeholder-link>Live Demo <span aria-hidden="true">&#8599;</span></a>
-                <a class="project-cta" href="#" data-placeholder-link>View Project <span aria-hidden="true">&#8594;</span></a>
-              </div>
+          <section class="case-section case-section--split" aria-labelledby="collaboration-title">
+            <div>
+              <p class="case-section-number">04</p>
+              <h2 id="collaboration-title">Human-AI Collaboration</h2>
             </div>
-          </article>
+            <div class="case-prose">
+              <p>The platform is designed for augmentation, not autonomous diagnosis. Each layer has a clear role:</p>
+              <p class="collaboration-flow">AI generates <span>&rarr;</span> QA highlights <span>&rarr;</span> Clinician reviews <span>&rarr;</span> System records</p>
+              <p>Approved corrections can enter a controlled feedback loop for error analysis and future model improvement, while access controls and audit logs keep clinical responsibility visible.</p>
+            </div>
+          </section>
+
+          <section class="case-section research-foundation" aria-labelledby="research-foundation-title">
+            <div class="case-section-heading">
+              <p class="case-section-number">05</p>
+              <h2 id="research-foundation-title">Research Foundation: 3D EAGAN</h2>
+              <p><em>3D EAGAN: 3D edge-aware attention generative adversarial network for prostate segmentation in transrectal ultrasound images</em></p>
+            </div>
+            <div class="research-overview">
+              <div class="case-prose">
+                <p>3D EAGAN learns volumetric context while explicitly strengthening edge information, helping the model recover prostate boundaries that are difficult to distinguish in ultrasound. The method was evaluated on an in-house clinical dataset and the public &mu;RegPro dataset.</p>
+                <p><strong>Research collaboration.</strong> The work was completed with researchers from Nanchang Hangkong University and clinical collaborators at The First Affiliated Hospital of Nanchang University, connecting model development with real review requirements.</p>
+                <a class="inline-link" href="https://qims.amegroups.org/article/view/124717/html" target="_blank" rel="noopener noreferrer">Read Publication <span aria-hidden="true">&nearr;</span></a>
+              </div>
+              <dl class="metric-grid" aria-label="Reported segmentation performance">
+                <div><dt>Dice</dt><dd>90.06%</dd></div>
+                <div><dt>Jaccard</dt><dd>84.11%</dd></div>
+                <div><dt>Hausdorff Distance</dt><dd>4.58 mm</dd></div>
+                <div><dt>Precision</dt><dd>90.58%</dd></div>
+                <div><dt>Recall</dt><dd>89.24%</dd></div>
+              </dl>
+            </div>
+            <figure class="case-figure">
+              <img src="assets/images/projects/3deagan.png" alt="Simplified architecture diagram of the 3D EAGAN prostate segmentation model" width="817" height="545">
+              <figcaption>The 3D EAGAN architecture, combining volumetric feature learning, edge-aware attention, and adversarial supervision.</figcaption>
+            </figure>
+          </section>
+
+          <section class="case-section" aria-labelledby="architecture-title">
+            <div class="case-section-heading">
+              <p class="case-section-number">06</p>
+              <h2 id="architecture-title">System Architecture</h2>
+            </div>
+            <div class="architecture-grid">
+              <article><h3>Core AI</h3><p>3D EAGAN &middot; PyTorch &middot; 3D Medical Image Segmentation &middot; Test-Time Augmentation &middot; Uncertainty Estimation</p></article>
+              <article><h3>Medical Imaging &amp; Interoperability</h3><p>DICOM &middot; Clinical Image Processing &middot; Structured Segmentation Output</p></article>
+              <article><h3>Backend</h3><p>Python &middot; FastAPI &middot; PostgreSQL</p></article>
+              <article><h3>Clinical Workflow</h3><p>Automated QA &middot; Human-in-the-Loop Review &middot; Audit Logging &middot; Controlled Feedback Loop</p></article>
+              <article><h3>LLM &amp; Knowledge Layer</h3><p>LLM &middot; RAG &middot; Tool Calling &middot; Clinical Workflow Assistance</p></article>
+            </div>
+          </section>
+
+          <section class="case-section design-principle" aria-labelledby="design-principle-title">
+            <p class="case-section-number">07</p>
+            <h2 id="design-principle-title">Design Principle</h2>
+            <blockquote>
+              <p>Specialized models perceive.<br>Quality-control systems verify.<br>LLMs organize and explain.<br>Clinicians decide.</p>
+            </blockquote>
+            <p>The goal is not a single autonomous model, but a human-centered and reliable workflow in which each component has a bounded, inspectable responsibility.</p>
+          </section>
         </div>
       </div>
     </section>

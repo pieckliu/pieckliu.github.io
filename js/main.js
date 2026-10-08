@@ -80,6 +80,15 @@ pageLinks.forEach((link) => {
   });
 });
 
+document.querySelectorAll('[data-scroll-link]').forEach((link) => {
+  link.addEventListener('click', (event) => {
+    const target = document.querySelector(link.dataset.scrollTarget);
+    if (!target) return;
+    event.preventDefault();
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+
 window.addEventListener('popstate', () => showPage(getPageIdFromHash()));
 showPage(getPageIdFromHash());
 
