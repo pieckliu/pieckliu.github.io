@@ -140,7 +140,7 @@ h3 { font-size: 1.45rem; font-weight: 650; }
 .case-back-link:hover { color: var(--accent); }
 .case-hero { max-width: 940px; padding-bottom: 88px; }
 .case-label, .case-section-number { margin-bottom: 18px; color: var(--accent); font-size: 0.7rem; font-weight: 740; letter-spacing: 0.13em; text-transform: uppercase; }
-.case-hero h1 { max-width: 900px; margin-bottom: 24px; font-size: clamp(3rem, 6vw, 5.6rem); }
+.case-hero h1 { max-width: 900px; margin-bottom: 24px; font-size: clamp(2.5rem, 5vw, 4.6rem); }
 .case-tagline { max-width: 800px; margin-bottom: 22px; color: var(--ink); font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.25rem, 2.5vw, 1.85rem); line-height: 1.42; }
 .case-summary { max-width: 790px; margin-bottom: 28px; color: var(--ink-soft); font-size: 1rem; }
 .case-inline-link { color: var(--ink); font-weight: 650; text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; transition: color 160ms ease; }
@@ -291,7 +291,7 @@ h3 { font-size: 1.45rem; font-weight: 650; }
   .home-project-content { min-height: 112px; }
   .case-back-link { margin-bottom: 36px; }
   .case-hero { padding-bottom: 66px; }
-  .case-hero h1 { font-size: clamp(2.6rem, 13vw, 4.2rem); }
+  .case-hero h1 { font-size: clamp(2.2rem, 11vw, 3.5rem); }
   .case-section { padding-block: 64px; }
   .feature-grid, .architecture-grid, .metric-grid { grid-template-columns: 1fr; }
   .feature-grid article { min-height: auto; padding: 26px 0; border-right: 0; }
