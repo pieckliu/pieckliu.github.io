@@ -8,7 +8,7 @@
   <title>Mengqing Liu | AI Engineer</title>
   <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/main.js?v=20261008" defer></script>
+  <script src="js/main.js?v=20261010" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -88,18 +88,18 @@
               </div>
             </a>
 
-            <article class="home-project-item" aria-label="Empty project entry 2">
-              <div class="home-project-visual" aria-hidden="true">
-                <img src="assets/images/projects/project-02-placeholder.svg" alt="" width="720" height="440">
+            <a class="home-project-item home-project-item--linked" href="#grade-llm" data-page-link aria-label="View the Grade-LLM Evidence-Aware Grading Copilot project">
+              <div class="home-project-visual">
+                            <img src="assets/images/projects/grade-llm-sample1.png" alt="Grade-LLM grading workspace with a handwritten submission, rubric scores, and teacher review controls" width="1901" height="909">
                 <span>02</span>
               </div>
-              <div class="home-project-content" aria-hidden="true">
-                <span class="home-project-line home-project-line--title"></span>
-                <span class="home-project-line home-project-line--meta"></span>
-                <span class="home-project-line"></span>
-                <span class="home-project-line home-project-line--short"></span>
+              <div class="home-project-copy">
+                <p class="home-project-kicker">Education AI &middot; LLM Systems</p>
+                <h2>Grade-LLM &mdash; Evidence-Aware Grading Copilot</h2>
+                <p>A rubric-aware, multimodal AI grading workflow that identifies potential errors, grounds feedback in student work, and keeps teachers in control of final assessment.</p>
+                <span class="home-project-link">View project <span aria-hidden="true">&rarr;</span></span>
               </div>
-            </article>
+            </a>
           </div>
         </div>
       </div>
@@ -241,6 +241,161 @@
               <p>Specialized models perceive.<br>Quality-control systems verify.<br>LLMs organize and explain.<br>Clinicians decide.</p>
             </blockquote>
             <p>The goal is not a single autonomous model, but a human-centered and reliable workflow in which each component has a bounded, inspectable responsibility.</p>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="section page-view case-study" id="grade-llm" data-page="grade-llm" aria-labelledby="grade-projects-title" hidden>
+      <div class="page-shell case-shell">
+        <a class="case-back-link" href="#home" data-page-link><span aria-hidden="true">&larr;</span> Back to Portfolio</a>
+
+        <header class="case-hero">
+          <p class="case-label">Education AI &middot; Assessment Workflow</p>
+          <h1 id="grade-projects-title">Grade-LLM &mdash; Evidence-Aware Grading Copilot</h1>
+          <p class="case-tagline">From automated grading to evidence-based, human-in-the-loop assessment.</p>
+          <p class="case-summary">Developed through a collaboration with <a class="case-inline-link" href="https://gjjlhzc.ntit.edu.cn/SchoolsandPrograms/list.htm" target="_blank" rel="noopener noreferrer">Nantong Institute of Technology</a>, this project explores how multimodal AI can support a more reliable grading workflow. Rather than assigning final grades autonomously, the proposed system analyzes handwritten student work against instructor-defined rubrics, identifies potential errors, presents supporting evidence, and highlights uncertain judgments for teacher review.</p>
+          <ul class="case-tags" aria-label="Project areas">
+            <li>Education AI</li>
+            <li>Vision-Language Models</li>
+            <li>LLM Systems</li>
+            <li>Human-in-the-Loop</li>
+          </ul>
+          <div class="case-actions">
+            <a class="case-button case-button--primary" href="#grade-llm" data-page-link data-scroll-link data-scroll-target="#grade-system-framework">View System Design <span aria-hidden="true">&darr;</span></a>
+          </div>
+        </header>
+
+        <div class="case-content">
+          <section class="case-section case-section--split" aria-labelledby="grade-challenge-title">
+            <div>
+              <p class="case-section-number">01</p>
+              <h2 id="grade-challenge-title">The Grading Challenge</h2>
+            </div>
+            <div class="case-prose">
+              <p>Grading handwritten exams involves more than checking a final answer. Teachers must evaluate intermediate steps, recognize alternative approaches, identify conceptual mistakes, and award partial credit consistently.</p>
+              <p>Multimodal LLMs can interpret handwritten answers and generate grading suggestions, but ambiguous writing, incomplete reasoning, alternative valid methods, and underspecified criteria can make a single-model judgment unreliable.</p>
+              <p>This project explores a more reviewable approach: AI structures the initial analysis, connects each important finding to visible evidence and rubric criteria, and flags uncertainty while teachers retain final assessment authority.</p>
+            </div>
+          </section>
+
+          <section class="case-section" aria-labelledby="grade-platform-title">
+            <div class="case-section-heading">
+              <p class="case-section-number">02</p>
+              <h2 id="grade-platform-title">What the Platform Does</h2>
+            </div>
+            <div class="feature-grid feature-grid--five">
+              <article>
+                <h3>Instructor-Defined Rubrics</h3>
+                <p>Instructors publish structured criteria for expected reasoning, partial credit, common mistakes, and review conditions. Versioned rubrics keep decisions traceable to the criteria used.</p>
+              </article>
+              <article>
+                <h3>Multimodal Answer Understanding</h3>
+                <p>A vision-language model extracts handwritten text, mathematical expressions, diagrams, and observable solution steps while preserving references to the original answer regions.</p>
+              </article>
+              <article>
+                <h3>Rubric-Aware Grading Analysis</h3>
+                <p>An LLM compares observable work with individual rubric criteria, identifies potential conceptual or computational errors, and suggests where partial credit may be appropriate.</p>
+              </article>
+              <article>
+                <h3>Uncertainty-Aware Verification</h3>
+                <p>Ambiguous writing, incomplete solutions, alternative methods, and conflicting checks are flagged for review. Targeted tools may support mathematical or rule-based verification.</p>
+              </article>
+              <article>
+                <h3>Teacher-in-the-Loop Review</h3>
+                <p>Teachers inspect submissions, evidence, suggested deductions, and uncertainty flags, then accept, modify, or reject recommendations before setting the final grade.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="case-section" aria-labelledby="grade-how-title">
+            <div class="case-section-heading">
+              <p class="case-section-number">03</p>
+              <h2 id="grade-how-title">How It Works</h2>
+              <p>The proposed architecture separates rubric management, multimodal perception, grading analysis, verification, and human review. Each stage can be inspected independently instead of relying on one opaque LLM judgment.</p>
+            </div>
+
+            <figure class="case-figure case-figure--wide case-figure--diagram" id="grade-system-framework">
+              <img src="assets/images/projects/grade-llm-framework.png" alt="Grade-LLM system framework showing rubric definition, vision-language understanding, grading analysis, evidence and uncertainty verification, teacher review, and audit feedback" width="696" height="889">
+              <figcaption>Grade-LLM system framework: instructor-defined rubrics guide multimodal analysis, evidence and uncertainty verification, teacher review, and auditable feedback.</figcaption>
+            </figure>
+
+            <ol class="workflow-list workflow-list--six">
+              <li><div><h3>Rubric Configuration</h3><p>An instructor defines and publishes expected steps, partial-credit rules, and review conditions.</p></div></li>
+              <li><div><h3>Exam Processing</h3><p>Multimodal vision models extract handwritten content and its locations in the source document.</p></div></li>
+              <li><div><h3>Rubric-Aware Analysis</h3><p>An LLM evaluates observable solution steps against the published rubric and proposes findings.</p></div></li>
+              <li><div><h3>Evidence &amp; Uncertainty Verification</h3><p>The system checks evidential support, surfaces ambiguity, and may invoke targeted verification tools.</p></div></li>
+              <li><div><h3>Teacher Review</h3><p>Teachers inspect evidence and uncertainty flags, then confirm or revise each recommendation.</p></div></li>
+              <li><div><h3>Final Assessment &amp; Feedback</h3><p>Teacher-approved results are recorded with the rubric version and supporting audit information.</p></div></li>
+            </ol>
+
+            <div class="interface-walkthrough" aria-labelledby="interface-walkthrough-title">
+              <div class="interface-heading">
+                <p class="case-subsection-label">Interface Walkthrough</p>
+                <h3 id="interface-walkthrough-title">From submission overview to teacher approval</h3>
+                <p>The interface connects cohort-level progress tracking with evidence-grounded review of individual submissions. Each screenshot can be opened at full resolution.</p>
+              </div>
+
+              <div class="interface-gallery">
+                <figure class="interface-shot">
+                  <a href="assets/images/projects/grade-llm-sample3.png" target="_blank" rel="noopener noreferrer" aria-label="Open the Grade-LLM submission overview screenshot at full resolution">
+                    <img src="assets/images/projects/grade-llm-sample3.png" alt="Grade-LLM submission overview showing evaluation progress, proposed grades, and review status" width="1920" height="908" loading="lazy" decoding="async">
+                  </a>
+                  <figcaption><strong>Submission overview</strong><span>Teachers can monitor evaluation progress, distinguish approved work from submissions requiring review, and open an individual grading workspace.</span></figcaption>
+                </figure>
+
+                <figure class="interface-shot">
+                  <a href="assets/images/projects/grade-llm-sample1.png" target="_blank" rel="noopener noreferrer" aria-label="Open the Grade-LLM grading workspace screenshot at full resolution">
+                    <img src="assets/images/projects/grade-llm-sample1.png" alt="Grade-LLM grading workspace showing a handwritten submission beside rubric scores and teacher controls" width="1901" height="909" loading="lazy" decoding="async">
+                  </a>
+                  <figcaption><strong>Evidence-aware grading workspace</strong><span>The original response remains visible beside proposed scores, rubric-level controls, uncertainty status, and editable teacher feedback.</span></figcaption>
+                </figure>
+
+                <figure class="interface-shot">
+                  <a href="assets/images/projects/grade-llm-sample2.png" target="_blank" rel="noopener noreferrer" aria-label="Open the Grade-LLM verification and rationale screenshot at full resolution">
+                    <img src="assets/images/projects/grade-llm-sample2.png" alt="Grade-LLM workspace showing automated test results, simulated AI rationale, and final grade approval controls" width="1906" height="910" loading="lazy" decoding="async">
+                  </a>
+                  <figcaption><strong>Verification and rationale</strong><span>Deterministic checks and evidence-linked rationale are presented before the teacher approves or adjusts the final assessment.</span></figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+
+          <section class="case-section case-section--split" aria-labelledby="grade-collaboration-title">
+            <div>
+              <p class="case-section-number">04</p>
+              <h2 id="grade-collaboration-title">Human-AI Collaboration</h2>
+            </div>
+            <div class="case-prose">
+              <p>Grade-LLM is designed around AI-assisted assessment rather than fully autonomous grading.</p>
+              <p class="collaboration-flow">AI analyzes <span>&rarr;</span> Evidence supports <span>&rarr;</span> Uncertainty highlights <span>&rarr;</span> Teacher decides</p>
+              <p>AI handles the initial analysis and surfaces potentially relevant errors. Teachers retain authority over partial credit, interpretation of alternative solutions, and final grading decisions.</p>
+              <p>Review outcomes can support retrospective error analysis and controlled workflow improvement. The goal is to reduce repetitive evaluation effort while keeping assessment decisions transparent, reviewable, and accountable.</p>
+            </div>
+          </section>
+
+          <section class="case-section" aria-labelledby="grade-architecture-title">
+            <div class="case-section-heading">
+              <p class="case-section-number">05</p>
+              <h2 id="grade-architecture-title">System Architecture</h2>
+              <p>These modules describe the proposed architecture and technical direction; they are not a claim that every component has been fully implemented or validated.</p>
+            </div>
+            <div class="architecture-grid">
+              <article><h3>Multimodal AI</h3><p>Vision-Language Models &middot; Handwriting Recognition &middot; Mathematical Expression Understanding &middot; Document Processing</p></article>
+              <article><h3>LLM &amp; Grading Analysis</h3><p>Large Language Models &middot; LangChain &middot; Structured Outputs &middot; Rubric-Aware Reasoning</p></article>
+              <article><h3>Verification &amp; Reliability</h3><p>Evidence Grounding &middot; Uncertainty Detection &middot; Rule-Based Validation &middot; Tool Calling</p></article>
+              <article><h3>Backend &amp; Data</h3><p>Python &middot; FastAPI &middot; MongoDB &middot; Versioned Rubrics &middot; Review Records</p></article>
+              <article><h3>Frontend &amp; Workflow</h3><p>React &middot; Teacher Review Dashboard &middot; Human-in-the-Loop &middot; Audit Logging</p></article>
+            </div>
+          </section>
+
+          <section class="case-section design-principle" aria-labelledby="grade-principle-title">
+            <p class="case-section-number">06</p>
+            <h2 id="grade-principle-title">Design Principle</h2>
+            <blockquote>
+              <p>AI analyzes.<br>Evidence supports.<br>Uncertainty guides review.<br>Teachers decide.</p>
+            </blockquote>
+            <p>The objective is not to replace teachers with autonomous grading models, but to build an educational AI workflow in which automated analysis supports consistent, evidence-based, and human-controlled assessment.</p>
           </section>
         </div>
       </div>

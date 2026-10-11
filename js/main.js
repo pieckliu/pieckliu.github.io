@@ -56,7 +56,8 @@ function showPage(pageId, updateHistory = false) {
   });
 
   navLinks.forEach((link) => {
-    const isCurrent = link.getAttribute('href') === `#${pageId}`;
+    const navPageId = pageId === 'grade-llm' ? 'projects' : pageId;
+    const isCurrent = link.getAttribute('href') === `#${navPageId}`;
     link.classList.toggle('is-active', isCurrent);
     if (isCurrent) link.setAttribute('aria-current', 'page');
     else link.removeAttribute('aria-current');
